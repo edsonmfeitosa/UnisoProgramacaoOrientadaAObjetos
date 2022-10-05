@@ -34,6 +34,7 @@ public class Exercicio01 {
                     break;
                 case 3:
                     //3 – Remover Aluno
+                    opcao3();
                     break;
                 case 4:
                     //4 – Mostrar Todos os Cursos
@@ -42,6 +43,7 @@ public class Exercicio01 {
                 case 5:
                     //5 – Mostrar alunos do curso
                     opcao5();
+                    break;
                 case 6:
                     System.out.println("O programa será fechado.");
                     break;
@@ -81,12 +83,40 @@ public class Exercicio01 {
         }
 
     }
+    public static void opcao3(){
+        //3 – Remover Aluno
+        Scanner tec = new Scanner(System.in);
+        System.out.println("Digite o código do curso.");
+        System.out.println("-------------------------");
+        opcao4();
+        int codCurso = Integer.parseInt(tec.nextLine());
+        Curso cursoEscolhido = new Curso();
+        for (Curso curso : cursos) {
+            if (curso.getCodigo() == codCurso) {
+                cursoEscolhido = curso;
+            }
+        }
+        System.out.println("Digite o RA do aluno a ser removido.");
+        var ra = tec.nextLine();
+        Aluno alunoEscolhido = new Aluno();
+        for (Aluno aluno : cursoEscolhido.getAlunos()) {
+            if (aluno.getRa().equals(ra)) {
+                alunoEscolhido = aluno;
+            }
+        }
+        cursoEscolhido.removerAluno(
+                cursoEscolhido.getAlunos().indexOf(alunoEscolhido));
+
+    }
     public static void opcao4(){
         for (Curso curso : cursos) {
             System.out.println(curso.imprimir());
         }
     }
     public static void opcao5(){
-        
+        for (Curso curso : cursos) {
+            System.out.println(curso.imprimirCompleto());
+            System.out.println("--------------------");
+        }
     }
 }

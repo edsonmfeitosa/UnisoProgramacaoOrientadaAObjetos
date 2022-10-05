@@ -1,8 +1,34 @@
 package poo.lista06;
 
+import java.util.Objects;
+
 public class Aluno {
     private String ra;
     private String nome;
+
+    @Override
+    public int hashCode() {
+        int hash = 7;
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final Aluno other = (Aluno) obj;
+        if (!Objects.equals(this.ra, other.ra)) {
+            return false;
+        }
+        return Objects.equals(this.nome, other.nome);
+    }
 
     public Aluno(String ra, String nome) {
         this.ra = ra;

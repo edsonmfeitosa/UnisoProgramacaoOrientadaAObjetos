@@ -3,6 +3,7 @@ package poo.associacao;
 public class AulaAssociacao {
     public static void main(String[] args) {
         //Motor m1 = new Motor();
+        /*
         Automovel auto1 = new Automovel("fusca",
                 "branco", 1960);
         //System.out.println(m1.fatorPotencia);
@@ -17,5 +18,6 @@ public class AulaAssociacao {
         System.out.println(p1.getAutomoveis().get(0).
                 getMotor().fatorPotencia);
         System.out.println(auto1.dono.getNome());
+        */
     }
 }

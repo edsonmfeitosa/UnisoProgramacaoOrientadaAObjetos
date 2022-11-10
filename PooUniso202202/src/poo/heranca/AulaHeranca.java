@@ -1,5 +1,6 @@
 package poo.heranca;
 
+import java.util.ArrayList;
 import poo.associacao.Automovel;
 
 public class AulaHeranca {
@@ -27,6 +28,19 @@ public class AulaHeranca {
                 + f.getMotor().getFatorPotencia());
         System.out.println(f.toString());
         Ferrari f2 = new Ferrari("preto", 2022);
+        
+        Automovel a3 = new Ferrari();
+        //todos os objetos são Automóveis, logo consigo colocar
+        //todos em um ArrayList de automóveis
+        ArrayList<Automovel> carros = new ArrayList<>();
+        carros.add(auto1);
+        carros.add(on);
+        carros.add(f);
+        carros.add(f2);
+        carros.add(a3);
+        for (Automovel carro : carros) {
+            System.out.println("Cor ----->" +carro.getCor());
+        }
 
     }
 }

@@ -2,7 +2,7 @@ package poo.heranca;
 
 import poo.associacao.Automovel;
 
-public class Ferrari extends Automovel {
+public class Ferrari extends Automovel implements Esportivo, Luxo{
     private int codigoFerrari;
     
     public Ferrari(String cor, int ano) {
@@ -32,6 +32,26 @@ public class Ferrari extends Automovel {
     @Override
     public String toString() {
         return "A cor da ferrari é " +getCor();
+    }
+
+    @Override
+    public String ligarTurbo() {
+        return "turbo ligado";
+    }
+
+    @Override
+    public String desligarTurbo() {
+        return "turbo desligado";
+    }
+
+    @Override
+    public String ligarArCondicionado() {
+        return "ar ligado";
+    }
+
+    @Override
+    public String desligarArCondicionado() {
+        return "ar desligado";
     }
     
     

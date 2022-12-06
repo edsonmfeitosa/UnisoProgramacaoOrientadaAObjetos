@@ -1,5 +1,5 @@
 
-package uniso.prova02;
+package prova02;
 
 import java.util.ArrayList;
 
